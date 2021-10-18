@@ -1,3 +1,4 @@
+import React from 'react';
 import './componentStyling/DateComponent.css';
 
 function DateComponent(props) {

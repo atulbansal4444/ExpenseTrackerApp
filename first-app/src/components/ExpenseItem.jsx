@@ -1,3 +1,4 @@
+import React from 'react';
 import './componentStyling/ExpenseItem.css';
 import DateComponent from './DateComponent';
 

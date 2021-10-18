@@ -1,3 +1,4 @@
+import React from 'react';
 import './componentStyling/ExpensesComponent.css';
 import ExpenseItem from './ExpenseItem';
 
