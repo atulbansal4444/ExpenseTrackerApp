@@ -1,8 +1,8 @@
 import React from 'react';
-import './componentStyling/ExpensesComponent.css';
+import '../componentStyling/ExpensesComponent.css';
 import ExpenseItem from './ExpenseItem';
 
-function ExpensesComponent(props) {
+const ExpensesComponent = (props) => {
     const expenses = props.expenses;
     return (
         <div className = "expenses">

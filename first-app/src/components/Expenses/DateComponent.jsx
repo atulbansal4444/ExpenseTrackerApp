@@ -1,7 +1,7 @@
 import React from 'react';
-import './componentStyling/DateComponent.css';
+import '../componentStyling/DateComponent.css';
 
-function DateComponent(props) {
+const DateComponent = (props) => {
     const date = props.date;
     const month = date.toLocaleString('en-US', { month: 'long' });
     const day = date.toLocaleString('en-US', { day: '2-digit' })

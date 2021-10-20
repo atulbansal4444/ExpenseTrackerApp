@@ -1,8 +1,8 @@
 import React from 'react';
-import './componentStyling/ExpenseItem.css';
+import '../componentStyling/ExpenseItem.css';
 import DateComponent from './DateComponent';
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
     return (
         <div className="expense-item">
             <DateComponent date= {props.date} />
