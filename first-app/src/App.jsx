@@ -1,4 +1,5 @@
 import React from "react";
+import AddExpenseComponent from "./components/addExpense/AddExpenseComponent.jsx";
 import ExpensesComponent from "./components/Expenses/ExpensesComponent.jsx";
 
 const App = () => {
@@ -28,7 +29,12 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
-  return (<ExpensesComponent expenses = {expenses} />);
+  return (
+    <>
+      <AddExpenseComponent />
+      <ExpensesComponent expenses={expenses} />
+    </>
+  );
 }
 
 export default App;
