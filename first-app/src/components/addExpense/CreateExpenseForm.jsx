@@ -3,22 +3,42 @@ import '../componentStyling/AddForm.css';
 
 const CreateExpenseForm = () => {
     const [title, setTitle] = useState('');
-    const [amount, setAmount] = useState(0);
-    const [date, setDate] = useState(new Date());
+    const [amount, setAmount] = useState('');
+    const [date, setDate] = useState('');
 
     const titleChangeHandler = (event) => {
         setTitle(event.target.value)
-        // console.log(event.target.value);
     };
 
     const amountHandler = (event) => {
         setAmount(event.target.value);
     }
 
-    const dateHandler = (event) => { };
+    const dateHandler = (event) => {
+        setDate(event.target.value);
+    };
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const expenseData = {
+            title: title,
+            amount: amount,
+            date: new Date(date)
+        };
+
+        console.log(expenseData);
+        resetToDefaultValues();
+    }
+
+    const resetToDefaultValues = () => {
+        setTitle('');
+        setAmount('');
+        setDate('');
+    }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title</label>
@@ -42,6 +62,7 @@ const CreateExpenseForm = () => {
                         type='date'
                         min='2019-01-01'
                         max='2022-12-31'
+                        value={date}
                         onChange={dateHandler} />
                 </div>
                 <div className="new-expense__actions">
