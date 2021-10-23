@@ -29,9 +29,15 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const addExpenseHandler = (expense) => {
+    expenses.push(expense);
+    console.log(expenses);
+  }
+
   return (
     <>
-      <AddExpenseComponent />
+      <AddExpenseComponent onAddExpense={addExpenseHandler} />
       <ExpensesComponent expenses={expenses} />
     </>
   );
