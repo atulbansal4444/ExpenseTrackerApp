@@ -4,13 +4,16 @@ import ExpensesFilter from './ExpenseFilter';
 import ExpenseListComponent from './ExpenseListComponent';
 
 const ExpensesComponent = (props) => {
-    const [year, setYear] = useState('2022');
+    const [year, setYear] = useState('');
 
     const setFilteredYear = (filteredYear) => {
         setYear(filteredYear);
     };
 
     const filteredList = props.expenses.filter(expense => {
+        if (year === '') {
+            return props.expenses;
+        }
         return expense.date.getFullYear().toString() === year;
     });
     

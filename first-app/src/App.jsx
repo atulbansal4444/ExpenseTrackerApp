@@ -40,7 +40,9 @@ const App = () => {
 
   return (
     <>
-      <AddExpenseComponent onAddExpense={addExpenseHandler} />
+      <AddExpenseComponent
+        onAddExpense={addExpenseHandler}
+        showForm={false}/>
       <ExpensesComponent expenses={expenses} />
     </>
   );
