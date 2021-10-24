@@ -1,7 +1,8 @@
 # Expenses App in react.js
 
-#### This app will be able to tell the expenses in the year and also we can add the expenses done in the year. basically this is to track the expense cycle.
-
+##### * React Application for expenses in year.
+##### * This app can add new, filter, keep track of the expenses done in year. 
+##### * This app will also list the expenses done on which date.
 
 #### ⚡ Languages Used
 
