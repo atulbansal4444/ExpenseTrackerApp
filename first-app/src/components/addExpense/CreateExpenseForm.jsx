@@ -29,6 +29,7 @@ const CreateExpenseForm = (props) => {
 
         props.onSaveExpanseData(expenseData);
         resetToDefaultValues();
+        props.onCancelClick();
     }
 
     const resetToDefaultValues = () => {
@@ -64,6 +65,9 @@ const CreateExpenseForm = (props) => {
                         max='2022-12-31'
                         value={date}
                         onChange={dateHandler} />
+                </div>
+                <div className="new-expense__actions">
+                    <button type='button' onClick={props.onCancelClick}> Cancel </button>
                 </div>
                 <div className="new-expense__actions">
                     <button type='submit'> Add Expense </button>
