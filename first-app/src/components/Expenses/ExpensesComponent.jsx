@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../componentStyling/ExpensesComponent.css';
+import ExpensesChartComponent from './ExpensesChartComponent';
 import ExpensesFilter from './ExpenseFilter';
 import ExpenseListComponent from './ExpenseListComponent';
 
@@ -22,6 +23,7 @@ const ExpensesComponent = (props) => {
             <ExpensesFilter
                 selectedYear={year}
                 onSelectYear={setFilteredYear} />
+            <ExpensesChartComponent expenses={filteredList} />
             <ExpenseListComponent expenses={filteredList} />
         </div>
     );
