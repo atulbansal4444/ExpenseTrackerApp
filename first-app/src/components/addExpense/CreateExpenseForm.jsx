@@ -7,7 +7,13 @@ const CreateExpenseForm = (props) => {
     const [date, setDate] = useState('');
 
     const titleChangeHandler = (event) => {
-        setTitle(event.target.value)
+        setTitle(event.target.value);
+        const elem = document.getElementById('name-field');
+        if (event.target.value === '') {
+            elem.style.borderColor = 'red';
+        } else {
+            elem.style.borderColor = 'lightgreen';
+        }
     };
 
     const amountHandler = (event) => {
@@ -44,6 +50,7 @@ const CreateExpenseForm = (props) => {
                 <div className="new-expense__control">
                     <label>Title</label>
                     <input
+                        id='name-field'
                         type='text'
                         onChange={titleChangeHandler}
                         value={title} />
