@@ -18,6 +18,12 @@ const CreateExpenseForm = (props) => {
 
     const amountHandler = (event) => {
         setAmount(event.target.value);
+        const elem = document.getElementById('expense-field');
+        if (event.target.value < 0) {
+            elem.style.borderColor = 'red';
+        } else {
+            elem.style.borderColor = 'lightgreen';
+        }
     }
 
     const dateHandler = (event) => {
@@ -58,8 +64,9 @@ const CreateExpenseForm = (props) => {
                 <div className="new-expense__control">
                     <label>Amount</label>
                     <input
+                        id='expense-field'
                         type='number'
-                        min='0.01'
+                        min='0.00'
                         step='0.01'
                         value={amount}
                         onChange={amountHandler} />
